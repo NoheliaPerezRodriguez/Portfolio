@@ -138,7 +138,7 @@ input, select, textarea {
 		margin: 2.5em 0 0 2.5em;
 	}
 
-		.tiles article > .image {
+		.tiles article > .image-tile {
 			-moz-transition: -moz-transform 0.5s ease;
 			-webkit-transition: -webkit-transform 0.5s ease;
 			-ms-transition: -ms-transform 0.5s ease;
@@ -150,12 +150,12 @@ input, select, textarea {
 			overflow: hidden;
 		}
 
-			.tiles article > .image img {
+			.tiles article > .image-tile img {
 				display: block;
 				width: 100%;
 			}
 
-			.tiles article > .image:before {
+			.tiles article > .image-tile:before {
 				pointer-events: none;
 				-moz-transition: background-color 0.5s ease, opacity 0.5s ease;
 				-webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
@@ -173,7 +173,7 @@ input, select, textarea {
 				opacity: 0.8;
 			}
 
-			.tiles article > .image:after {
+			.tiles article > .image-tile:after {
 				pointer-events: none;
 				-moz-transition: opacity 0.5s ease;
 				-webkit-transition: opacity 0.5s ease;
@@ -257,43 +257,43 @@ input, select, textarea {
 					margin-bottom: 0;
 				}
 
-		.tiles article.style1 > .image:before {
+		.tiles article.style1 > .image-tile:before {
 			background-color: #f2849e;
 		}
 
-		.tiles article.style2 > .image:before {
+		.tiles article.style2 > .image-tile:before {
 			background-color: #7ecaf6;
 		}
 
-		.tiles article.style3 > .image:before {
+		.tiles article.style3 > .image-tile:before {
 			background-color: #7bd0c1;
 		}
 
-		.tiles article.style4 > .image:before {
+		.tiles article.style4 > .image-tile:before {
 			background-color: #c75b9b;
 		}
 
-		.tiles article.style5 > .image:before {
+		.tiles article.style5 > .image-tile:before {
 			background-color: #ae85ca;
 		}
 
-		.tiles article.style6 > .image:before {
+		.tiles article.style6 > .image-tile:before {
 			background-color: #8499e7;
 		}
 
-		body:not(.is-touch) .tiles article:hover > .image {
+		body:not(.is-touch) .tiles article:hover > .image-tile {
 			-moz-transform: scale(1.1);
 			-webkit-transform: scale(1.1);
 			-ms-transform: scale(1.1);
 			transform: scale(1.1);
 		}
 
-			body:not(.is-touch) .tiles article:hover > .image:before {
+			body:not(.is-touch) .tiles article:hover > .image-tile:before {
 				background-color: #333333;
 				opacity: 0.35;
 			}
 
-			body:not(.is-touch) .tiles article:hover > .image:after {
+			body:not(.is-touch) .tiles article:hover > .image-tile:after {
 				opacity: 0;
 			}
 
@@ -356,7 +356,7 @@ input, select, textarea {
 				margin: 1.25em 0 0 1.25em;
 			}
 
-				.tiles article:hover > .image {
+				.tiles article:hover > .image-tile {
 					-moz-transform: scale(1.0);
 					-webkit-transform: scale(1.0);
 					-ms-transform: scale(1.0);
@@ -378,6 +378,7 @@ input, select, textarea {
 
 	}
 
+	/* end tiles*/
 
 /* Type */
 
@@ -2851,6 +2852,69 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
+
+/* image-tile */
+
+.image-tile {
+	border-radius: 4px;
+	border: 0;
+	display: inline-block;
+	position: relative;
+}
+
+	.image-tile img {
+		border-radius: 4px;
+		display: block;
+	}
+
+	.image-tile.left, .image-tile.right {
+		max-width: 40%;
+	}
+
+		.image-tile.left img, .image-tile.right img {
+			width: 100%;
+		}
+
+	.image-tile.left {
+		float: left;
+		padding: 0 1.5em 1em 0;
+		top: 0.25em;
+	}
+
+	.image-tile.right {
+		float: right;
+		padding: 0 0 1em 1.5em;
+		top: 0.25em;
+	}
+
+	.image-tile.fit {
+		display: block;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
+
+		.image-tile.fit img {
+			width: 100%;
+		}
+
+	.image-tile.main {
+		display: block;
+		margin: 0 0 3em 0;
+		width: 100%;
+	}
+
+		.image-tile.main img {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.image-tile.main {
+				margin: 0 0 2em 0;
+			}
+
+		}
+/*end image tile*/
 
 /* Image */
 
