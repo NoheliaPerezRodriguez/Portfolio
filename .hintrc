@@ -28,9 +28,11 @@
         "ignore": [
           "-webkit-text-size-adjust",
           "-webkit-text-size-adjust: none",
-          "-webkit-overflow-scrolling"
+          "-webkit-overflow-scrolling",
+          "-ms-filter"
         ]
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
