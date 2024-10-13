@@ -237,7 +237,38 @@ body.is-preload *:after {
 }
 
 /*fin emblema*/
+/*slider*/
 
+.slide-cliente img {
+	width: 100px;
+	height: 100px;
+	animation: scroll 60s linear infinite;
+}
+
+.slide-cliente-track {
+	width: 100%;
+	display: flex;
+	gap: 3em;
+	overflow: hidden;
+}
+
+.slide-clienter {
+
+	background-color: transparent;
+	padding: 0em 1em 4em 1em;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translatex(-1000%)
+	}
+}
+
+/*fin slider*/
 /*about me container*/
 .nohe-aboutme-container {
 	display: flex;
@@ -260,7 +291,7 @@ body.is-preload *:after {
 	width: auto;
 	height: auto;
 	padding: 1rem 1rem 0rem 1rem;
-	
+
 }
 
 .nohe-aboutme-container-emblema-icon {
@@ -341,7 +372,7 @@ body.is-preload *:after {
 }
 
 .nohe-aboutme-container-article-text {
-    margin: 0rem 2rem 0rem 2rem;
+	margin: 0rem 2rem 0rem 2rem;
 }
 
 .download-btn {
@@ -434,24 +465,6 @@ body.is-preload *:after {
 
 /*------------------*/
 
-/*profile pic*/
-.profilepic {
-	object-fit: cover;
-	background: no-repeat;
-	width: 95%;
-	height: 95%;
-	transition: all 0.5s ease-in-out;
-
-
-}
-
-.profilepic:hover {
-	height: 100%;
-	width: 100%;
-	filter: saturate(0.5);
-}
-
-/*end profile pic*/
 
 /* Tiles */
 
@@ -3386,21 +3399,69 @@ a.image:hover img {
 
 .post-feature-href-a {
 	padding: 20px;
-	box-shadow: 10px 10px 10px 0px lightgray;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	min-width: 400px;
 	flex-grow: 1;
-	width: 50%;
+	width: 30%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
+	border-radius: 25px;
 }
 
+.post-feature-href-b {
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	min-width: 400px;
+	flex-grow: 1;
+	width: 20%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	border-radius: 25px;
+}
+.profilepic {
+	object-fit: cover;
+	background: no-repeat;
+	width: 95%;
+	height: 95%;
+	transition: all 0.5s ease-in-out;
+	border-radius: 25px;
+
+}
+
+.profilepic-b {
+	object-fit: cover;
+	background: no-repeat;
+	width: 95%;
+	height: 95%;
+	border-radius: 25px;
+}
+
+
+.profilepic:hover {
+	height: 100%;
+	width: 100%;
+	filter: saturate(0.5);
+}
 .post-feature-header {
 	padding: 20px;
 	min-width: 300px;
+	margin-right: 2rem;
+	margin-left: 2rem;
 	flex-grow: 1;
-	width: 50%;
+	width: 40%;
+}
+
+.post-feature-header-b {
+	padding: 20px;
+	min-width: 300px;
+	flex-grow: 1;
+	width: 40%;
+	margin-left: 2rem;
 }
 
 .post-feature-div {
@@ -3409,6 +3470,14 @@ a.image:hover img {
 	flex-direction: row;
 	align-content: center;
 	justify-content: center;
+}
+
+.post-feature-div-b {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: space-between;
+	justify-content: space-between;
 }
 
 ul.actions {
