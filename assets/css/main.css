@@ -318,7 +318,7 @@ body.is-preload *:after {
 	background-color: transparent;
 	min-width: 300px;
 	width: 30%;
-	height: 600px;
+	height: 400px;
 
 	perspective: 1000px;
 	border-radius: 25px;
@@ -373,6 +373,11 @@ body.is-preload *:after {
 
 .nohe-aboutme-container-article-text {
 	margin: 0rem 2rem 0rem 2rem;
+	max-width: 100%;
+	font-size: 14px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .download-btn {
@@ -3398,47 +3403,47 @@ a.image:hover img {
 }
 
 .post-feature-href-a {
-	padding: 20px;
+	
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	min-width: 400px;
+	min-width: 340px;
 	flex-grow: 1;
 	width: 30%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	border-radius: 25px;
+	
 }
 
 .post-feature-href-b {
-	padding: 20px;
+
 	margin-bottom: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	min-width: 400px;
+	min-width: 340px;
 	flex-grow: 1;
 	width: 20%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	border-radius: 25px;
+	
 }
 .profilepic {
 	object-fit: cover;
 	background: no-repeat;
-	width: 95%;
-	height: 95%;
+	width: 100%;
+	height: 100%;
 	transition: all 0.5s ease-in-out;
-	border-radius: 25px;
+
 
 }
 
 .profilepic-b {
 	object-fit: cover;
 	background: no-repeat;
-	width: 95%;
-	height: 95%;
-	border-radius: 25px;
+	width: 100%;
+	height: 100%;
+
 }
 
 
@@ -3448,6 +3453,7 @@ a.image:hover img {
 	filter: saturate(0.5);
 }
 .post-feature-header {
+	font-size: 16px;
 	padding: 20px;
 	min-width: 300px;
 	margin-right: 2rem;
@@ -4093,6 +4099,16 @@ body.is-preload #wrapper.fade-in:before {
 
 	#wrapper>.bg {
 		background-size: auto, auto, auto 175%;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	#wrapper>.bg {
+
+		background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+		background-size: auto, auto, auto 110%;
 	}
 
 }
