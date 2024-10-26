@@ -1,0 +1,50 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+body{
+    background-color: black !important;
+    color: white !important;
+}
+
+/* bootstrap adapatations */
+
+.bg-dark{
+    background-color: black !important;
+}
+
+.col-xs-0 {
+    display:block;
+}
+.col-xm-0 {
+    display:block;
+}
+.col-md-0 {
+    display:block;
+}
+/*-----------------------*/
+
+.nohe-navbar{
+    padding: 20px;
+}
+
+.nohe-section{
+    min-height: 90vh;
+}
+
+@media only screen and (max-device-width: 576px) {
+    .col-xs-0 {
+        display: none;
+    }  
+}
+@media only screen and (min-device-width: 576px) and (max-device-width: 768px) {
+     .col-sm-0 {
+        display: none;
+    }  
+}
+@media only screen and (min-device-width: 769px) {
+    .col-md-0 {
+        display: none;
+    } 
+}
