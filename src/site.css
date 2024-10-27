@@ -20,9 +20,7 @@ body{
 .col-xm-0 {
     display:block;
 }
-.col-md-0 {
-    display:block;
-}
+
 /*-----------------------*/
 
 .nohe-navbar{
@@ -33,18 +31,44 @@ body{
     min-height: 90vh;
 }
 
-@media only screen and (max-device-width: 576px) {
+.nohe-flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.nohe-flex-container-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.nohe-flex-container-half{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    max-width: 45%;
+}
+
+
+.TimelineContainer{
+    min-height: 80vh;
+    max-width: 60vw;
+}
+
+@media only screen and (max-width: 576px) {
     .col-xs-0 {
         display: none;
     }  
 }
-@media only screen and (min-device-width: 576px) and (max-device-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
      .col-sm-0 {
         display: none;
     }  
 }
-@media only screen and (min-device-width: 769px) {
-    .col-md-0 {
-        display: none;
-    } 
-}
+
