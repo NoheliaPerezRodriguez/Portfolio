@@ -69,10 +69,21 @@ body {
     border-radius: 0px;
     background-color: mediumorchid !important;
     color: white;
-    padding: 0.75rem 3rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.btn-pur-primary p {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center !important;
+    justify-content: center;
+    align-content: center;
+    margin: 0px !important;
 }
 
 .btn-pur-primary:hover {
@@ -131,17 +142,22 @@ body {
 }
 
 .BarraLateral {
-    width: 1.5rem;
-    margin-top: 8rem;
-    margin-bottom: 10rem;
+    flex-wrap: wrap;
+    height: 60%;
+    justify-content: center;
+    align-content: flex-end;
+    display: flex;
     writing-mode: vertical-lr;
     text-orientation: mixed;
     transform: rotate(180deg);
-    margin-left: -1vw;
+}
+
+.BarraLateral h3 {
+    margin: 0px;
 }
 
 .BrandPicture {
-    height: 4rem;   
+    height: 4rem;
 }
 
 .hiddenoffphone {
@@ -162,7 +178,7 @@ body {
     margin-top: -25px;
     margin-right: -30px;
     height: 10rem;
-    background-color:#1b1a19;
+    background-color: #1b1a19;
 }
 
 .groupcarrousel-divcol {
@@ -174,12 +190,12 @@ body {
 .groupcarrousel-h1 {
     min-width: 100px;
     font-family: sans-serif;
-    font-size: 3vw;    
+    font-size: 3vw;
     font-weight: bolder;
     margin-bottom: 0px;
 }
 
-.groupcarrousel-h4 {   
+.groupcarrousel-h4 {
     min-width: 100px;
     font-family: sans-serif;
     font-size: 1.5vw;
@@ -201,66 +217,6 @@ body {
         display: inherit;
     }
 
-    .Container-Home-Izquierdo {
-        background-position-x: center !important;
-        background-size: contain !important;
-        background-position-y: bottom !important;
-        background-position-x: right !important;
-    }
-
-    .Container-Home-Izquierdo-izq {
-        max-width: 22vw;
-        margin-left: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .Container-Home-Izquierdo-izq span {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 80vw;
-    }
-  
-    .BarraLateral {
-        width: 1rem;
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-        max-height: 15rem;
-    }
-
-    .btn-pur-primary {
-        border-radius: 0px;
-        padding: 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    #Start_Carrousel {
-        height: 9rem;
-        background-color: #303030;
-        margin-left: -30px;
-        margin-top: -85px;
-        margin-right: -30px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .groupcarrousel-h1 {
-        min-width: 100px;
-        font-family: sans-serif;
-        font-size: 8vw;
-        font-weight: bolder;
-        margin-bottom: 0px;
-    }
-    .groupcarrousel-h4 {
-        min-width: 100px;
-        font-family: sans-serif;
-        font-size: 4vw;
-        font-weight: bolder;
-        margin-bottom: 0px;
-    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -272,86 +228,12 @@ body {
         display: inherit;
     }
 
-    .Container-Home-Izquierdo {
-        background-position-x: center;
-        background-size: contain;
-        background-position-y: bottom;
-
-    }
-
-    .Container-Home-Izquierdo-izq {
-        max-width: 22vw;
-        margin-left: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .Container-Home-Izquierdo-izq span {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 80vw;
-    }
-
-    .BarraLateral {
-        width: 1rem;
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-        max-height: 15rem;
-    }
-
-    .btn-pur-primary {
-        border-radius: 0px;
-        padding: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    #Start_Carrousel {
-        height: 9rem;
-        background-color: #303030;
-        margin-left: -30px;
-        margin-top: -85px;
-        margin-right: -30px;
-        position: relative;
-        z-index: 1;
-    }
-   
-    .groupcarrousel-h1 {
-        min-width: 100px;
-        font-family: sans-serif;
-        font-size: 6vw;
-        font-weight: bolder;
-        margin-bottom: 0px;
-    }
-    .groupcarrousel-h4 {
-        min-width: 100px;
-        font-family: sans-serif;
-        font-size: 3vw;
-        font-weight: bolder;
-        margin-bottom: 0px;
-    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1130px) {
 
     .BarraLateral {
         display: none;
-    }
-
-    .groupcarrousel-h1 {
-        min-width: 100px;
-        font-family: sans-serif;
-        font-size: 4vw;
-        font-weight: bolder;
-        margin-bottom: 0px;
-    }
-    .groupcarrousel-h4 {
-        min-width: 100px;
-        font-family: sans-serif;
-        font-size: 2vw;
-        font-weight: bolder;
-        margin-bottom: 0px;
     }
 
 }
