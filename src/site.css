@@ -27,6 +27,7 @@ body {
 
 .nohe-navbar {
     padding: 20px;
+    position: static;
 }
 
 .nohe-flex-container {
@@ -104,25 +105,18 @@ body {
 
 .Container-Home-Derecho p {
     text-align: justify;
-    margin-right: 3rem;
+
     max-height: 145px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.Container-Home-Derecho-Lengueta {
-    height: fit-content;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: end;
-    align-content: end;
-}
-
 .Lengueta {
-    margin-right: -25px;
-    margin-bottom: 2rem;
-    height: 100px;
+    position: absolute;
+    top: 10vh;
+    left: 94.5vw;
+    height: 90px;
+    width: 118px;
 }
 
 .Container-Home-Izquierdo {
@@ -131,6 +125,8 @@ body {
     background-position-x: center;
     background-size: auto;
     height: 100%;
+    min-height: 620px;
+    max-height: 620px;
 }
 
 .Container-Home-Izquierdo-izq {
@@ -138,18 +134,25 @@ body {
     margin-left: 3rem;
     display: flex;
     flex-direction: column;
+    padding-left: 0px;
 
 }
 
 .BarraLateral {
     flex-wrap: wrap;
-    height: 60%;
+
     justify-content: center;
     align-content: flex-end;
     display: flex;
     writing-mode: vertical-lr;
     text-orientation: mixed;
     transform: rotate(180deg);
+}
+
+.btn-floating {
+    position: absolute;
+    top: 65vh;
+    left: 10vw;
 }
 
 .BarraLateral h3 {
@@ -173,11 +176,14 @@ body {
     width: 30vw;
 }
 
+#Start {
+    width: 100vw;
+    margin-top: 3vh;
+}
+
 #Start_Carrousel {
-    margin-left: -30px;
-    margin-top: -25px;
-    margin-right: -30px;
-    height: 10rem;
+
+    height: 8rem;
     background-color: #1b1a19;
 }
 
@@ -190,7 +196,7 @@ body {
 .groupcarrousel-h1 {
     min-width: 100px;
     font-family: sans-serif;
-    font-size: 3vw;
+    font-size:  calc(3vw + 25px);
     font-weight: bolder;
     margin-bottom: 0px;
 }
@@ -198,7 +204,7 @@ body {
 .groupcarrousel-h4 {
     min-width: 100px;
     font-family: sans-serif;
-    font-size: 1.5vw;
+    font-size:  calc(1.5vw + 10px);
     font-weight: bolder;
     margin-bottom: 0px;
 }
@@ -208,7 +214,25 @@ body {
     color: rgb(250, 209, 149)
 }
 
-@media only screen and (max-width: 576px) {
+.navbar-toggler-icon{
+    color: rgb(250, 250, 250, 1);
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .Container-Home-Izquierdo {
+        background-image: url(images/fotonohe.png);
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-position-y: top;
+        background-size: auto;
+
+        min-height: 620px;
+        max-height: 620px;
+    }
+}
+
+@media only screen and (max-width: 938px) {
     .col-xs-0 {
         display: none;
     }
@@ -219,8 +243,9 @@ body {
 
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px) {
-    .col-sm-0 {
+
+@media only screen and (max-width: 768px) {
+    .col-xs-0 {
         display: none;
     }
 
@@ -228,12 +253,22 @@ body {
         display: inherit;
     }
 
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1130px) {
-
-    .BarraLateral {
-        display: none;
+    .Container-Home-Izquierdo {
+        background-image: url(images/fotonohe.png);
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-position-y: bottom;
+        background-size: contain;
+        height: 100vw;
+        min-height:400px;
+        
     }
 
+    #Start_Carrousel {
+        position: relative;
+        height: 8rem;
+        background-color: #1b1a19;
+        margin-top: -80px;
+        z-index: 1;
+    }
 }
