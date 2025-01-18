@@ -476,7 +476,7 @@ display: flex;
     height: 34px;
     width: 34px;
     border-radius: 50%;
-    border: 2px solid #dfdfdf;
+    border: 2px solid #A35FF8;
     /* replace text with an icon */
     overflow: hidden;
     color: transparent;
@@ -523,7 +523,7 @@ display: flex;
     background-position: 0 -16px;
   }
   .no-touch .cd-timeline-navigation a.inactive:hover {
-    border-color: #dfdfdf;
+    border-color: #A35FF8;
   }
   
   .cd-horizontal-timeline .events-content {
@@ -582,7 +582,7 @@ display: flex;
     animation-direction: reverse;
   }
   .cd-horizontal-timeline .events-content li > * {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
   }
   .cd-horizontal-timeline .events-content h4 {
