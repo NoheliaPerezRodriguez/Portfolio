@@ -299,6 +299,22 @@ display: flex;
         min-height:400px;
         
     }
+
+    .Cajones {
+      width: 80vw;
+      min-width: auto;
+      min-height: fit-content;
+      height: 20rem;
+      box-shadow: inset 2em 1.5em 60px black;
+      border-radius: 25px;
+      background-color: rgb(32, 32, 32);
+  }
+ 
+  #Who-I-Am-Bottom-Container{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
 }
 
 
