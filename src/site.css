@@ -25,7 +25,62 @@ body {
   font-family: 'Candara', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+small{
+  font-family: sans-serif !important;
+}
+
+h5{
+  font-family: sans-serif !important;
+}
+
+p{
+  font-family: sans-serif !important;
+}
+
 /* bootstrap adapatations */
+
+.col-10{
+  justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.colgalery{
+    padding-right: 0rem;
+    padding-left: 0rem;
+    margin-top: 0rem;
+}
+.galerycard {
+  --bs-card-spacer-y: 0rem;
+  --bs-card-spacer-x:  0rem;
+  --bs-card-title-spacer-y:  0rem;
+  --bs-card-border-width: 0px;
+  --bs-card-border-color: none;
+  --bs-card-border-radius:  0rem;
+  --bs-card-box-shadow: none;
+  --bs-card-inner-border-radius:  0rem;
+  --bs-card-cap-padding-y:  0rem;
+  --bs-card-cap-padding-x:  0rem;
+  --bs-card-cap-bg: none;
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: transparent;
+  --bs-card-img-overlay-padding:  0rem;
+  --bs-card-group-margin:  0rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: auto;
+  word-wrap: break-word;
+  background-color: none;
+  background-clip: border-box;
+  border:  0rem;
+  border-radius:  0rem;
+}
 
 .bg-dark {
   background-color: black !important;
@@ -144,7 +199,7 @@ body {
   width: 23rem;
   min-width: auto;
   min-height: fit-content;
-  height: 20rem;
+  height: 28rem;
   box-shadow: inset 2em 1.5em 60px black;
   border-radius: 25px;
   background-color: rgb(32, 32, 32);
@@ -252,7 +307,7 @@ body {
 
 .groupcarrousel-plus {
 
-  color: rgb(250, 209, 149)
+  color: #FFEA76;
 }
 
 .dot {
@@ -286,7 +341,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 938px) {
+@media only screen and (max-width: 1128px) {
   .col-xs-0 {
     display: none;
   }
@@ -318,11 +373,12 @@ body {
 
   }
 
+  
   .Cajones {
     width: 80vw;
     min-width: auto;
     min-height: fit-content;
-    height: 20rem;
+    height: 28rem;
     box-shadow: inset 2em 1.5em 60px black;
     border-radius: 25px;
     background-color: rgb(32, 32, 32);
@@ -512,21 +568,22 @@ body {
 }
 
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #313740;
-  border-color: #313740;
+  background-color: #A35FF8;
+  border-color: #A35FF8;
 }
 
 .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
+  color: white !important;
 }
 
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #313740;
-  border-color: #313740;
+  background-color: #A35FF8;
+  border-color: #A35FF8;
 }
 
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #313740;
+  border-color: #A35FF8;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -589,6 +646,7 @@ body {
 
 .cd-timeline-navigation a.next {
   right: 0;
+  border-color: #A35FF8;
 }
 
 .no-touch .cd-timeline-navigation a:hover {
