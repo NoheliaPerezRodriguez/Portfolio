@@ -203,11 +203,15 @@ p{
 
   width: 23rem;
   min-width: auto;
-  min-height: fit-content;
-  height: 28rem;
+  min-height: 28rem; /* Set a minimum height */
+  height: auto; /* Allow the height to adjust dynamically */
   box-shadow: inset 2em 1.5em 60px black;
   border-radius: 25px;
   background-color: rgb(32, 32, 32);
+  display: flex;
+  flex-direction: column; /* Ensure children are stacked vertically */
+  justify-content: space-between; /* Push the button to the bottom */
+  padding: 1rem; /* Add padding for better spacing */
 }
 
 .Container-Home-Derecho-Lengueta {
