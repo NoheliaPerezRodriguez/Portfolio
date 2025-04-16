@@ -434,6 +434,10 @@ p{
   .btn {
     font-size: 0.8rem; /* Ajusta el tamaño del texto en los botones */
   }
+
+  .groupcarrousel-h1 {
+    font-size: 1.5rem; /* Adjust the size as needed */
+  }
 }
 
 
@@ -468,7 +472,7 @@ p{
   content: none;
 }
 
-.cd-horizontal-timeline table {
+cd-horizontal-timeline table {
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -523,7 +527,7 @@ p{
 
 }
 
-.cd-horizontal-timeline .events-wrapper::after {
+cd-horizontal-timeline .events-wrapper::after {
   right: 0;
 
 }
@@ -794,7 +798,7 @@ p{
   content: '- ';
 }
 
-.cd-horizontal-timeline .events-content p {
+cd-horizontal-timeline .events-content p {
   font-size: 16px;
   margin-top: 15px;
 
@@ -929,4 +933,16 @@ p{
   width: 0px;
   margin-left: -1.5px;
   background-color: #eeeeee;
+}
+
+.contact-button {
+    color: #FFEA76;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+    color: white; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    text-decoration: underline; /* Optional: underline on hover */
 }
