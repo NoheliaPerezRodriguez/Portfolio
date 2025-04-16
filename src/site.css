@@ -82,6 +82,11 @@ p{
   border-radius:  0rem;
 }
 
+.galerycard img:hover {
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+}
+
 .bg-dark {
   background-color: black !important;
 }

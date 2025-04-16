@@ -209,7 +209,7 @@
                     <div class="row ">
                         <div class="col">
                             <h1 class="groupcarrousel-h1">SOME<span class="groupcarrousel-h4"
-                                    style="font-weight: lighter;">PAST WORKS</span> </h1>
+                                    style="font-weight: lighter;"> PAST WORKS</span> </h1>
                         </div>
                     </div>
                 </div>
@@ -268,6 +268,101 @@
                 </div>
 
             </div>
+
+            <div hidden>
+               <!-- create the divs here  -->
+                <div class="card galerycard">                    
+                    <img src="src/images/galery/bbva 11.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/11.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/222.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/BODEGUITA RED.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/cafeteria letrero.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/CAFFE EL GUAROoooooo.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/cartel bosque.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/CARTEL COFFE PLANTS.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/cartelera.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/CATALOGO.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/chapa REINA1.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/chapa REY1.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/debito bbva1.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/GESTA RED.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/identidad continental panama.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/JOYERIA RED.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/LALATINA RED.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/LOGO VECTOR RGB.png" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/MAPHFRE RED.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/marcas 2.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/mockup logo barber.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/mockup.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/PASALERA VIA 11.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/PEP.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/repro.png" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/RON IMPERIAL.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/skin care.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/telef.png" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/Toronto school.jpg" style="width:100%;">
+                </div>
+                <div class="card galerycard">
+                    <img src="src/webGalery/ultimo.jpg" style="width:100%;">
+                </div>
+            </div>
+
         </section>
         <section id="My-Skills" class="container-fluid nohe-section">
             <div id="headersection-5" class="row m-4">
@@ -1019,6 +1114,24 @@
 
         </footer>
     </main>
+
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalLabel">Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="galleryImage" src="" class="img-fluid" alt="Gallery Image">
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-secondary" id="prevImage">← Previous</button>
+                    <button type="button" class="btn btn-secondary" id="nextImage">Next →</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

@@ -265,4 +265,66 @@ jQuery(document).ready(function($){
 		//check if mobile or desktop device
 		return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
 	}
-}); 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const galleryCards = document.querySelectorAll(".galerycard img");
+    const galleryModal = new bootstrap.Modal(document.getElementById("galleryModal"));
+    const galleryImage = document.getElementById("galleryImage");
+    const prevButton = document.getElementById("prevImage");
+    const nextButton = document.getElementById("nextImage");
+
+    let currentIndex = 0;
+    const images = Array.from(galleryCards).map(img => img.src);
+
+    // Open modal on image click
+    galleryCards.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            currentIndex = index;
+            galleryImage.src = images[currentIndex];
+            galleryModal.show();
+        });
+    });
+
+    // Navigate to the previous image
+    prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        galleryImage.src = images[currentIndex];
+    });
+
+    // Navigate to the next image
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        galleryImage.src = images[currentIndex];
+    });
+
+    // Add swipe functionality for mobile users
+    let startX = 0;
+    let endX = 0;
+
+    galleryImage.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    galleryImage.addEventListener("touchmove", (e) => {
+        endX = e.touches[0].clientX;
+    });
+
+    galleryImage.addEventListener("touchend", () => {
+        const swipeDistance = endX - startX;
+
+        if (swipeDistance > 50) {
+            // Swipe right (previous image)
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            galleryImage.src = images[currentIndex];
+        } else if (swipeDistance < -50) {
+            // Swipe left (next image)
+            currentIndex = (currentIndex + 1) % images.length;
+            galleryImage.src = images[currentIndex];
+        }
+
+        // Reset swipe values
+        startX = 0;
+        endX = 0;
+    });
+});
