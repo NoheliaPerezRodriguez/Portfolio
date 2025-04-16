@@ -268,63 +268,56 @@ jQuery(document).ready(function($){
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const galleryCards = document.querySelectorAll(".galerycard img");
+    const galleryCards = document.querySelectorAll(".galerycard img, .galerycard video");
     const galleryModal = new bootstrap.Modal(document.getElementById("galleryModal"));
-    const galleryImage = document.getElementById("galleryImage");
+    const galleryContent = document.getElementById("galleryContent");
     const prevButton = document.getElementById("prevImage");
     const nextButton = document.getElementById("nextImage");
 
     let currentIndex = 0;
-    const images = Array.from(galleryCards).map(img => img.src);
+    const items = Array.from(galleryCards).map(card => ({
+        type: card.tagName.toLowerCase(),
+        src: card.src
+    }));
 
-    // Open modal on image click
-    galleryCards.forEach((img, index) => {
-        img.addEventListener("click", () => {
+    // Open modal on click
+    galleryCards.forEach((card, index) => {
+        card.addEventListener("click", () => {
             currentIndex = index;
-            galleryImage.src = images[currentIndex];
+            updateModalContent();
             galleryModal.show();
         });
     });
 
-    // Navigate to the previous image
-    prevButton.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        galleryImage.src = images[currentIndex];
-    });
+    // Update modal content
+    function updateModalContent() {
+        const currentItem = items[currentIndex];
+        galleryContent.innerHTML = ""; // Clear previous content
 
-    // Navigate to the next image
-    nextButton.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        galleryImage.src = images[currentIndex];
-    });
-
-    // Add swipe functionality for mobile users
-    let startX = 0;
-    let endX = 0;
-
-    galleryImage.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    galleryImage.addEventListener("touchmove", (e) => {
-        endX = e.touches[0].clientX;
-    });
-
-    galleryImage.addEventListener("touchend", () => {
-        const swipeDistance = endX - startX;
-
-        if (swipeDistance > 50) {
-            // Swipe right (previous image)
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            galleryImage.src = images[currentIndex];
-        } else if (swipeDistance < -50) {
-            // Swipe left (next image)
-            currentIndex = (currentIndex + 1) % images.length;
-            galleryImage.src = images[currentIndex];
+        if (currentItem.type === "img") {
+            const img = document.createElement("img");
+            img.src = currentItem.src;
+            img.className = "img-fluid";
+            galleryContent.appendChild(img);
+        } else if (currentItem.type === "video") {
+            const video = document.createElement("video");
+            video.src = currentItem.src;
+            video.className = "img-fluid";
+            video.controls = true;
+            video.autoplay = true; // Optional: autoplay the video
+            galleryContent.appendChild(video);
         }
+    }
 
-        // Reset swipe values
-        startX = 0;
-        endX = 0;
+    // Navigate to the previous item
+    prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateModalContent();
+    });
+
+    // Navigate to the next item
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateModalContent();
     });
 });
