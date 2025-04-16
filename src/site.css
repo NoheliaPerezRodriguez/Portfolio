@@ -402,6 +402,38 @@ p{
     flex: 0 0 auto;
     width: 90%;
   }
+
+  body {
+    font-size: 90%; /* Reduce el tamaño de la fuente en general */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Ajusta los encabezados */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p, small, button {
+    font-size: 0.9rem; /* Ajusta los párrafos, textos pequeños y botones */
+  }
+
+  .navbar-brand img {
+    max-width: 80%; /* Ajusta el tamaño del logo en la barra de navegación */
+  }
+
+  .btn {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto en los botones */
+  }
 }
 
 
