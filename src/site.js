@@ -348,3 +348,12 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = mailtoLink;
     });
 });
+
+document.querySelectorAll('.contact-button').forEach(button => {
+    button.addEventListener('click', function () {
+        const contactSection = document.getElementById('Footer');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});

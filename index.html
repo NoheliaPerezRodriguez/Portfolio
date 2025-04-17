@@ -10,17 +10,16 @@
     <link href="src/site.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="src/site.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="Container-Home-Derecho-Lengueta col-xs-0">
-        <img class="Lengueta" src="src/images/logoderecha.png">
-    </div>
+    
 
     <nav class="nohe-navbar navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="src\images\logotabstrip.png"></a>
-            <button style=" color: rgb(250, 250, 250, 1);" title="nav-bar button" class="navbar-toggler" type="button"
+            <button style="color: rgb(250, 250, 250, 1);" title="nav-bar button" class="navbar-toggler" type="button"
                 data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,22 +33,20 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Start</a>
+                            <a class="nav-link active" aria-current="page" href="#Start">Start</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Who-I-Am">Who I Am</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">What I Do</a>
+                            <a class="nav-link" href="#Time-Line">My Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Who I Am</a>
+                            <a class="nav-link" href="#Galery">My Work</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Expperience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Get In Touch</a>
+                            <a class="nav-link" href="#Footer">Get In Touch</a>
                         </li>
                     </ul>
                 </div>
@@ -58,7 +55,7 @@
     </nav>
 
     <main>
-        <section id="Start" class="container-fluid">
+        <section id="Start" class="container-fluid" data-aos="fade-up">
             <div class="row">
                 <div class="col-1 BarraLateral">
 
@@ -100,7 +97,7 @@
 
         </section>
 
-        <section id="Start_Carrousel" class="row mb-5">
+        <section id="Start_Carrousel" class="row mb-5" data-aos="fade-left">
             <div class="col groupcarrousel">
                 <div class="row">
                     <div class="col">
@@ -118,8 +115,8 @@
                         <h1 class="groupcarrousel-h1"><strong class="groupcarrousel-plus">+</strong>30</h1>
                     </div>
                     <div class="col groupcarrousel-divcol">
-                        <h4 class="groupcarrousel-h4">SUCCESSFULL</h4>
-                        <h4 class="groupcarrousel-h4">CAMPAINGS</h4>
+                        <h4 class="groupcarrousel-h4">SUCCESSFUL</h4>
+                        <h4 class="groupcarrousel-h4">CAMPAIGNS</h4>
                     </div>
                 </div>
             </div>
@@ -136,7 +133,7 @@
             </div>
         </section>
 
-        <section id="Who-I-Am" class="container-fluid nohe-section">
+        <section id="Who-I-Am" class="container-fluid nohe-section" data-aos="fade-right">
             <div id="headersection-1" class="row m-4">
                 <div class="col">
                     <div class="row ">
@@ -226,7 +223,7 @@
 
         </section>
 
-        <section id="Galery" class="container-fluid nohe-section">
+        <section id="Galery" class="container-fluid nohe-section" data-aos="zoom-in">
 
             <div class="row m-5" data-masonry="{&quot;percentPosition&quot;: true }"
                 style="position: relative; height: 690px;">
@@ -420,7 +417,7 @@
             </div>
 
         </section>
-        <section id="My-Skills" class="container-fluid nohe-section">
+        <section id="My-Skills" class="container-fluid nohe-section" data-aos="fade-up">
             <div id="headersection-5" class="row m-4">
                 <div class="col">
                     <div class="row ">
@@ -616,7 +613,7 @@
             </div>
         </section>
     
-        <section id="Time-Line" class="container-fluid nohe-section">
+        <section id="Time-Line" class="container-fluid nohe-section" data-aos="fade-left">
             <div class="row">
                 <div class="col-1  my-4">
                     <span class="BarraLateral">
@@ -972,7 +969,7 @@
                                                 </li>
                                                 <li data-date="01/01/2023">
                                                     <div class="row">
-                                                        <div class="col-sm-12 col-lg-6">
+                                                        <div class="col-sm-12 col-lg-12">
                                                             <h4>
                                                                 <img class="rounded float-left m-r-15" width="40"
                                                                     alt="user" src="src/images/logoderecha.png">
@@ -1003,7 +1000,7 @@
                                                 </li>
                                                 <li data-date="01/01/2024" class="selected">
                                                     <div class="row">
-                                                        <div class="col-sm-12 col-lg-6">
+                                                        <div class="col-sm-12 col-lg-12">
                                                             <h4>
                                                                 <img class="rounded float-left m-r-15" width="40"
                                                                     alt="user" src="src/images/logoderecha.png">
@@ -1043,11 +1040,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-pur-primary" style="width: 100px; justify-self: center;">
-                            <p>Let's Start</p>
-                        </button>
                     </div>
-
                 </div>
                 <div class="col col-xs-0 BarraLateral" style="max-width: 30px;">
                     <h1 style="color:rgb(80, 80, 80); margin: 0px; font-size: xxx-large;">
@@ -1057,7 +1050,7 @@
             </div>
         </section>
         
-        <footer id="Footer" class="container-fluid nohe-section pt-5">
+        <footer id="Footer" class="container-fluid nohe-section pt-5" data-aos="fade-up">
 
             <div class="row">
                 <div class="col-1">
@@ -1081,7 +1074,7 @@
                                     </h4>
                                     <br>
                                     <div style="min-width: 250px;">
-                                        <svg id="Logo_3" data-name="Logo 03" xmlns="http://www.w3.org/2000/svg"
+                                        <svg id="Logo_3" class="rotating-svg" data-name="Logo 03" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 267 308.67">
                                             <defs>
                                                 <style>
@@ -1136,11 +1129,13 @@
                     </div>
                 </div>
                 <div class="col-1">
-                    <span class="BarraLateral">
-                        <h3>
-                            BACK TO THE TOP
-                        </h3>
-                    </span>
+                    <a href="#Start" class="btn btn-link" style="text-decoration: none;">
+                        <span class="BarraLateral">
+                            <h3 class="purpletext">
+                                BACK TO THE TOP
+                            </h3>
+                        </span>
+                    </a>
                 </div>
             </div>
 
@@ -1184,6 +1179,10 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
         async></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <div style="color: black; text-decoration: none;">Icons made from <a style="color: black; text-decoration: none;"
             href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>
