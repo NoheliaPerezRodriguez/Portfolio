@@ -321,3 +321,27 @@ document.addEventListener("DOMContentLoaded", () => {
         updateModalContent();
     });
 });
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const notes = document.getElementById("notes").value.trim();
+
+    // Validate fields
+    if (!name || !email || !notes) {
+        alert("Please fill out all fields before submitting.");
+        return;
+    }
+
+    // Create the mailto link
+    const recipient = "nohedesign@gmail.com";
+    const subject = `Contact Request from ${name}`;
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0ANotes: ${notes}`;
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open the user's email client
+    window.location.href = mailtoLink;
+});

@@ -1111,29 +1111,27 @@
                                 </div>
                             </div>
                             <br>
-                            <form class="col mb-5">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">Name</span>
-                                    <input type="text" class="form-control" placeholder="Name" aria-label="Username"
-                                        aria-describedby="basic-addon1">
-                                </div>
-                                <br>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">E-Mail</span>
-                                    <input type="text" class="form-control" placeholder="E-Mail" aria-label="Username"
-                                        aria-describedby="basic-addon1">
-                                </div>
-                                <br>
-                                <div class="input-group">
-                                    <span class="input-group-text">Notes</span>
-                                    <textarea class="form-control" rows="5" aria-label="Notes"></textarea>
-                                </div>
-                                <br>
-                                <br>
-                                <button class="btn btn-pur-primary" style="width: fit-content; justify-self: center;">
-                                    <p>SEND CONTACT REQUEST</p>
-                                </button>
-                            </form>
+                            <form class="col mb-5" id="contactForm">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Name</span>
+        <input type="text" class="form-control" id="name" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1" required>
+    </div>
+    <br>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">E-Mail</span>
+        <input type="email" class="form-control" id="email" placeholder="E-Mail" aria-label="Email" aria-describedby="basic-addon1" required>
+    </div>
+    <br>
+    <div class="input-group">
+        <span class="input-group-text">Notes</span>
+        <textarea class="form-control" id="notes" rows="5" aria-label="Notes" required></textarea>
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-pur-primary" style="width: fit-content; justify-self: center;">
+        <p>SEND CONTACT REQUEST</p>
+    </button>
+</form>
                         </div>
                     </div>
                 </div>
