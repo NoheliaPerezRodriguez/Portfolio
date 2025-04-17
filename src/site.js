@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
     var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 150;
+		eventsMinDistance = 100;
 
 	(timelines.length > 0) && initTimeline(timelines);
 
@@ -201,7 +201,6 @@ jQuery(document).ready(function($){
 		element.style["transform"] = property+"("+value+")";
 	}
 
-	//based on http://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript
 	function parseDate(events) {
 		var dateArrays = [];
 		events.each(function(){
@@ -237,10 +236,7 @@ jQuery(document).ready(function($){
 		return Math.min.apply(null, dateDistances);
 	}
 
-	/*
-		How to tell if a DOM element is visible in the current viewport?
-		http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-	*/
+	
 	function elementInViewport(el) {
 		var top = el.offsetTop;
 		var left = el.offsetLeft;
