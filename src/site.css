@@ -324,6 +324,10 @@ p{
   display: inline-block;
 }
 
+.responsive-padding{
+  padding-top: 0px !important;
+}
+
 .AboutmeDiv {
   background-image: url(images/AboutMe.png);
   background-repeat: no-repeat;
@@ -331,6 +335,13 @@ p{
   background-position-y: top;
   background-size: auto;
   min-height: 615px;
+}
+
+@media only screen and (max-width: 768px) {
+  .AboutmeDiv {
+    background-size: contain; /* Make the image smaller on phones */
+    min-height: 400px; /* Adjust the height for smaller screens */
+  }
 }
 
 @media only screen and (max-width: 1600px) {
