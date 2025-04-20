@@ -1039,3 +1039,13 @@ cd-horizontal-timeline .events-content p {
     left: 60%;
     animation-delay: 3s;
 }
+
+.back-to-top {
+    text-decoration: none;
+    color: white; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.back-to-top:hover {
+    color: #A35FF8; /* Purple color used in the page */
+}

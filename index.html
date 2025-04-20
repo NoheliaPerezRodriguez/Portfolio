@@ -8,19 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="src/site.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="src/site.js"></script>
 </head>
 
 <body>
-    <div class="Container-Home-Derecho-Lengueta col-xs-0">
-        <img class="Lengueta" src="src/images/logoderecha.png">
-    </div>
-
+    
     <nav class="nohe-navbar navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="src\images\logotabstrip.png"></a>
-            <button style=" color: rgb(250, 250, 250, 1);" title="nav-bar button" class="navbar-toggler" type="button"
+            <a class="navbar-brand" href="#"><img src="src/images/logotabstrip.png"></a>
+            <button style="color: rgb(250, 250, 250, 1);" title="nav-bar button" class="navbar-toggler" type="button"
                 data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,22 +32,19 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Start</a>
+                            <a class="nav-link active" aria-current="page" href="#Start">Start</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">What I Do</a>
+                            <a class="nav-link" href="#Who-I-Am">Who I Am</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Who I Am</a>
+                            <a class="nav-link" href="#Galery">My Work</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Expperience</a>
-                        </li>
+                            <a class="nav-link" href="#Time-Line">My Experience</a>
+                        </li>                        
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Get In Touch</a>
+                            <a class="nav-link" href="#Footer">Get In Touch</a>
                         </li>
                     </ul>
                 </div>
@@ -58,7 +53,7 @@
     </nav>
 
     <main>
-        <section id="Start" class="container-fluid">
+        <section id="Start" class="container-fluid" data-aos="fade-up">
             <div class="row">
                 <div class="col-1 BarraLateral">
 
@@ -100,7 +95,7 @@
 
         </section>
 
-        <section id="Start_Carrousel" class="row mb-5">
+        <section id="Start_Carrousel" class="row mb-5" data-aos="fade-left">
             <div class="col groupcarrousel">
                 <div class="row">
                     <div class="col">
@@ -136,7 +131,7 @@
             </div>
         </section>
 
-        <section id="Who-I-Am" class="container-fluid nohe-section">
+        <section id="Who-I-Am" class="container-fluid nohe-section" data-aos="fade-right">
             <div id="headersection-1" class="row m-4">
                 <div class="col">
                     <div class="row ">
@@ -226,7 +221,7 @@
 
         </section>
 
-        <section id="Galery" class="container-fluid nohe-section">
+        <section id="Galery" class="container-fluid nohe-section" data-aos="zoom-in">
 
             <div class="row m-5" data-masonry="{&quot;percentPosition&quot;: true }"
                 style="position: relative; height: 690px;">
@@ -616,7 +611,7 @@
             </div>
         </section>
     
-        <section id="Time-Line" class="container-fluid nohe-section">
+        <section id="Time-Line" class="container-fluid nohe-section" data-aos="fade-left">
             <div class="row">
                 <div class="col-1  my-4">
                     <span class="BarraLateral">
@@ -1063,7 +1058,7 @@
             </div>
         </section>
         
-        <footer id="Footer" class="container-fluid nohe-section pt-5">
+        <footer id="Footer" class="container-fluid nohe-section pt-5" data-aos="fade-up">
 
             <div class="row">
                 <div class="col-1">
@@ -1117,26 +1112,24 @@
                                 </div>
                             </div>
                             <br>
-                            <form class="col mb-5">
+                            <form class="col mb-5" id="contactForm">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Name</span>
-                                    <input type="text" class="form-control" placeholder="Name" aria-label="Username"
-                                        aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" id="name" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
                                 <br>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">E-Mail</span>
-                                    <input type="text" class="form-control" placeholder="E-Mail" aria-label="Username"
-                                        aria-describedby="basic-addon1">
+                                    <input type="email" class="form-control" id="email" placeholder="E-Mail" aria-label="Email" aria-describedby="basic-addon1" required>
                                 </div>
                                 <br>
                                 <div class="input-group">
                                     <span class="input-group-text">Notes</span>
-                                    <textarea class="form-control" rows="5" aria-label="Notes"></textarea>
+                                    <textarea class="form-control" id="notes" rows="5" aria-label="Notes" required></textarea>
                                 </div>
                                 <br>
                                 <br>
-                                <button class="btn btn-pur-primary" style="width: fit-content; justify-self: center;">
+                                <button type="submit" class="btn btn-pur-primary" style="width: fit-content; justify-self: center;">
                                     <p>SEND CONTACT REQUEST</p>
                                 </button>
                             </form>
@@ -1144,11 +1137,13 @@
                     </div>
                 </div>
                 <div class="col-1">
-                    <span class="BarraLateral">
-                        <h3>
-                            BACK TO THE TOP
-                        </h3>
-                    </span>
+                    <a href="#Start" class="back-to-top">
+                        <span class="BarraLateral">
+                            <h3>
+                                BACK TO THE TOP
+                            </h3>
+                        </span>
+                    </a>
                 </div>
             </div>
 
@@ -1192,6 +1187,10 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
         async></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <div style="color: black; text-decoration: none;">Icons made from <a style="color: black; text-decoration: none;"
             href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>
