@@ -439,6 +439,8 @@ p{
     font-size: 0.9rem; /* Ajusta los párrafos, textos pequeños y botones */
   }
 
+
+
   .navbar-brand img {
     max-width: 80%; /* Ajusta el tamaño del logo en la barra de navegación */
   }
@@ -452,7 +454,22 @@ p{
   }
 }
 
+@keyframes coin-flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
 
+#Logo_3 {
+    animation: coin-flip 5s infinite linear;
+    transform-origin: center;
+}
 
 .cd-horizontal-timeline ol,
 .cd-horizontal-timeline ul {
