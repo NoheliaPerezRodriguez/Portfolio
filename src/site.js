@@ -388,3 +388,38 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     // Open the user's email client
     window.location.href = mailtoLink;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            // Prevent default anchor behavior
+            event.preventDefault();
+
+            // Get the target section's ID
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Scroll to the target section smoothly
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+
+                // Close the offcanvas navigation bar
+                const offcanvas = document.querySelector('.offcanvas');
+                const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+                if (offcanvasInstance) {
+                    offcanvasInstance.hide();
+                }
+            }
+        });
+    });
+
+    // Prevent the offcanvas from resetting the scroll position
+    const offcanvas = document.querySelector('.offcanvas');
+    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+        // Ensure the scroll position remains unchanged
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY);
+    });
+});
